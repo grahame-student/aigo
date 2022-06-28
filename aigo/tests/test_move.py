@@ -2,7 +2,7 @@ from unittest import TestCase
 
 from aigo.move import Move
 from aigo.types.point import Point
-from hamcrest import assert_that, equal_to, raises, calling
+from hamcrest import assert_that, calling, equal_to, raises
 
 
 class TestMove(TestCase):
