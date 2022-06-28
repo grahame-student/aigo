@@ -56,4 +56,6 @@ class TestMove(TestCase):
 
     def test_constructor_raises_exception_when_multiple_arguments_set(self):
         move = Move(None, True)
-        assert_that(calling(move.__init__).with_args(Point(5, 5), True), raises(Exception))
+        assert_that(
+            calling(move.__init__).with_args(Point(5, 5), True), raises(Exception)
+        )
