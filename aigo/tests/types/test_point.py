@@ -1,7 +1,7 @@
 from unittest import TestCase
 
-from aigo.types.point import Point
 from aigo.types.direction import Direction
+from aigo.types.point import Point
 from hamcrest import assert_that, equal_to
 
 
