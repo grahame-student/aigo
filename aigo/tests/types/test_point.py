@@ -1,9 +1,8 @@
 from unittest import TestCase
 
-from hamcrest import assert_that, equal_to
-
 from aigo.types.point import Point
 from aigo.types.direction import Direction
+from hamcrest import assert_that, equal_to
 
 
 class TestPoint(TestCase):
