@@ -11,7 +11,7 @@ class Move:
         is_pass: Optional[bool] = False,
         is_resign: Optional[bool] = False,
     ):
-        point_set = (point is not None)
+        point_set = point is not None
         assert point_set ^ is_pass ^ is_resign
         self.point = point
         self.is_play = point is not None
