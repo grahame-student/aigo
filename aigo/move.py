@@ -5,7 +5,12 @@ from aigo.types.point import Point
 
 
 class Move:
-    def __init__(self, point: Optional[Point] = None, is_pass: Optional[bool] = False, is_resign: Optional[bool] = False):
+    def __init__(
+        self,
+        point: Optional[Point] = None,
+        is_pass: Optional[bool] = False,
+        is_resign: Optional[bool] = False,
+    ):
         assert (point is not None) ^ is_pass ^ is_resign
         self.point = point
         self.is_play = point is not None
