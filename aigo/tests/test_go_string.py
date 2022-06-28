@@ -55,7 +55,12 @@ class TestGoString(TestCase):
 
     def test_merged_with_throws_exception_when_colours_different(self):
         go_string = GoString(Player.black, [Point(1, 1)], [])
-        assert_that(calling(go_string.merged_with).with_args(GoString(Player.white, [Point(2, 2)], [])), raises(Exception))
+        assert_that(
+            calling(go_string.merged_with).with_args(
+                GoString(Player.white, [Point(2, 2)], [])
+            ),
+            raises(Exception),
+        )
 
     def test_merged_with_sets_stones_to_combined_list_of_stones(self):
         go_string = GoString(Player.white, [Point(1, 1)], [])
