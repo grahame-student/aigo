@@ -55,4 +55,5 @@ class TestMove(TestCase):
         assert_that(move.is_play, equal_to(False))
 
     def test_constructor_raises_exception_when_multiple_arguments_set(self):
-        assert_that(calling(lambda: Move(Point(5, 5), True)), raises(Exception))
+        move = Move(None, True)
+        assert_that(calling(move.__init__).with_args(Point(5, 5), True), raises(Exception))
