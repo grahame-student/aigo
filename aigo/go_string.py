@@ -1,5 +1,6 @@
 from __future__ import annotations
-from typing import List, Union, Set
+
+from typing import List, Set, Union
 
 from aigo.types.player import Player
 from aigo.types.point import Point
