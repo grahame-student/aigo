@@ -1,7 +1,7 @@
 from collections import namedtuple
 
 
-class Point(namedtuple('Point', 'row col')):
+class Point(namedtuple("Point", "row col")):
     def neighbours(self):
         return [
             Point(self.row - 1, self.col),
