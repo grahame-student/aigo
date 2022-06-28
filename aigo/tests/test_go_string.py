@@ -3,7 +3,7 @@ from unittest import TestCase
 from aigo.go_string import GoString
 from aigo.types.player import Player
 from aigo.types.point import Point
-from hamcrest import assert_that, equal_to, instance_of, calling, raises
+from hamcrest import assert_that, calling, equal_to, instance_of, raises
 
 
 class TestGoString(TestCase):
