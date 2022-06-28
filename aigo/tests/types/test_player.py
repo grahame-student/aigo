@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from aigo.player import Player
+from aigo.types.player import Player
 from hamcrest import assert_that, equal_to
 
 
