@@ -6,16 +6,23 @@ from aigo.types.point import Point
 
 
 class GoString:
-    def __init__(self, colour: Player, stones: Union[List[Point], Set[Point]], liberties: Union[List[Point], Set[Point]]):
+    def __init__(
+        self,
+        colour: Player,
+        stones: Union[List[Point], Set[Point]],
+        liberties: Union[List[Point], Set[Point]],
+    ):
         self.colour = colour
         self.stones = set(stones)
         self.liberties = set(liberties)
 
     def __eq__(self, other):
-        return isinstance(other, GoString) and \
-               self.colour == other.colour and \
-               self.stones == other.stones and \
-               self.liberties == other.liberties
+        return (
+            isinstance(other, GoString)
+            and self.colour == other.colour
+            and self.stones == other.stones
+            and self.liberties == other.liberties
+        )
 
     @property
     def num_liberties(self):
