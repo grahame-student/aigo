@@ -1,0 +1,2 @@
+# aigo
+AI go engine
