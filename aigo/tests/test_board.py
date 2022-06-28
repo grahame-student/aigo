@@ -18,24 +18,39 @@ class TestBoard(TestCase):
 
     def test_place_stone_throws_exception_if_point_row_greater_than_grid_row(self):
         board = Board(5, 5)
-        assert_that(calling(board.place_stone).with_args(Player.white, Point(6, 3)), raises(Exception))
+        assert_that(
+            calling(board.place_stone).with_args(Player.white, Point(6, 3)),
+            raises(Exception),
+        )
 
     def test_place_stone_throws_exception_if_point_row_less_than_grid_row(self):
         board = Board(5, 5)
-        assert_that(calling(board.place_stone).with_args(Player.white, Point(0, 3)), raises(Exception))
+        assert_that(
+            calling(board.place_stone).with_args(Player.white, Point(0, 3)),
+            raises(Exception),
+        )
 
     def test_place_stone_throws_exception_if_point_col_greater_than_grid_col(self):
         board = Board(5, 5)
-        assert_that(calling(board.place_stone).with_args(Player.white, Point(3, 6)), raises(Exception))
+        assert_that(
+            calling(board.place_stone).with_args(Player.white, Point(3, 6)),
+            raises(Exception),
+        )
 
     def test_place_stone_throws_exception_if_point_col_less_than_grid_col(self):
         board = Board(5, 5)
-        assert_that(calling(board.place_stone).with_args(Player.white, Point(3, 0)), raises(Exception))
+        assert_that(
+            calling(board.place_stone).with_args(Player.white, Point(3, 0)),
+            raises(Exception),
+        )
 
     def test_place_stone_throws_exception_if_point_already_played(self):
         board = Board(5, 5)
         board.place_stone(Player.white, Point(1, 1))
-        assert_that(calling(board.place_stone).with_args(Player.white, Point(1, 1)), raises(Exception))
+        assert_that(
+            calling(board.place_stone).with_args(Player.white, Point(1, 1)),
+            raises(Exception),
+        )
 
     def test_place_stone_adds_neighbours_to_liberties(self):
         board = Board(5, 5)

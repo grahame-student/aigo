@@ -25,10 +25,7 @@ class Board:
             self.__grid[go_string_point] = new_string
 
     def __is_on_grid(self, point: Point) -> bool:
-        return (
-                1 <= point.row <= self.rows and
-                1 <= point.col <= self.cols
-        )
+        return 1 <= point.row <= self.rows and 1 <= point.col <= self.cols
 
     def __get(self, point) -> Player:
         string = self.__grid.get(point)
